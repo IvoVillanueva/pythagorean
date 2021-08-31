@@ -75,7 +75,8 @@ df %>%
   gt_theme_538() %>%
   tab_header(
     title = md("**Pronóstico de los porcentajes de victorias de la MLB**"),
-    subtitle = md(paste0("Temporada 2021 por equipos con MAD (Desviación media absoluta) = ", scales::percent(DescTools::MeanAD(df$abs_error), accuracy = 0.01), format(Sys.Date(), format = "<br>A %d %B, %Y"))) # round(DescTools::MeanAD(df$abs_error),3)
+    subtitle = md(paste0("Temporada 2021 por equipos con MAD (Desviación media absoluta) = ",
+                         scales::percent(DescTools::MeanAD(df$abs_error), accuracy = 0.01), format(Sys.Date(), format = "<br>A %d %B, %Y"))) 
   ) %>%
   cols_align(
     align = "right",
